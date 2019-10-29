@@ -3,14 +3,13 @@ const express = require('express');
 const server = express();
 
 const projects = [];
-let requestsNumber = 0;
 
 server.use(express.json());
 
 server.use((req, res, next) => {
     requestsNumber += 1;
 
-    console.log('Number of current requisitions: ', requestsNumber);
+    console.count('Number of current requests');
 
     return next();
 })
